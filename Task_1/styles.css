@@ -1,0 +1,263 @@
+body, h1, h2, p, a, form, img, ul, li {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f7f7f7;
+    line-height: 1.6;
+}
+
+h1, h2, p, a, form {
+    text-align: center;
+}
+
+header {
+    position: relative;
+    background-color: #3498db;
+    color: #fff;
+    padding: 100px 0;
+}
+
+.header-image {
+    background-image: url('header-background.jpg');
+    background-size: cover;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    opacity: 0.8;
+}
+
+.header-content {
+    position: relative;
+    z-index: 1;
+    animation: fadeInUp 1s ease-in-out, typing 3s steps(40) forwards;
+}
+
+@keyframes fadeInUp {
+    0% {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes typing {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+header h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: 3px solid transparent;
+    animation: typing-cursor 1s steps(1) infinite;
+}
+
+@keyframes typing-cursor {
+    50% {
+        border-color: #fff;
+    }
+}
+
+.cta-button {
+    background-color: #e74c3c;
+    color: #fff;
+    font-size: 20px;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    display: block;
+    margin: 0 auto;
+}
+
+.cta-button:hover {
+    background-color: #c0392b;
+    transform: scale(1.05);
+}
+
+.features {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 50px 0;
+}
+
+.feature-card {
+    text-align: center;
+    margin: 20px;
+    padding: 20px;
+    background-color: #3498db;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.feature-card img {
+    width: 100%;
+    max-height: 200px;
+    transition: transform 0.3s;
+}
+
+.feature-card:hover img {
+    transform: scale(1.1);
+}
+
+.feature-card h2 {
+    font-size: 24px;
+    margin: 15px 0;
+    color: #fff;
+}
+
+.feature-card p {
+    font-size: 16px;
+    color: #ecf0f1;
+}
+
+.benefits {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: #f0f0f0;
+    padding: 50px 0;
+}
+
+.benefit-section {
+    text-align: center;
+    margin: 20px;
+    padding: 20px;
+    background-color: #2980b9;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.benefit-section img {
+    width: 100%;
+    max-height: 200px;
+    transition: transform 0.3s;
+}
+
+.benefit-section:hover img {
+    transform: scale(1.1);
+}
+
+.benefit-section h2 {
+    font-size: 24px;
+    margin: 15px 0;
+    color: #fff;
+}
+
+/* ... (previous CSS rules) */
+
+.testimonials {
+    background-color: #fff;
+    padding: 50px 0;
+}
+
+.testimonial-slider {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+/* ... (previous CSS rules) */
+
+.testimonial {
+    background-color: #ecf0f1;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin: 20px;
+    max-width: 500px;
+    animation: zoomIn 1s ease-in-out, fadeInUp 1s ease-in-out;
+}
+
+@keyframes zoomIn {
+    0% {
+        transform: scale(0.9); /* Initial scale */
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1); /* Full scale */
+        opacity: 1;
+    }
+}
+
+.testimonial-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.testimonial-image {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+    object-fit: cover;
+    transition: transform 0.3s; /* Add transform transition for hover effect */
+}
+
+.testimonial:hover .testimonial-image {
+    transform: scale(1.1); /* Zoom in image on hover */
+}
+
+.testimonial p {
+    font-style: italic;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.testimonial .author {
+    font-weight: bold;
+    color: #333;
+}
+
+.newsletter {
+    background-color: #00bcd4;
+    color: #fff;
+    padding: 50px 0;
+}
+
+.newsletter h2 {
+    font-size: 36px;
+    margin: 20px 0;
+}
+
+.newsletter p {
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+
+.newsletter button {
+    margin-top: 20px;
+    animation: fadeIn 1s ease-in-out;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+}
+
+.contact-info a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 10px;
+}

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wanderlust Adventures</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="header-image">
+        </div>
+        <div class="header-content">
+            <h1>Explore the World with Wanderlust Adventures</h1>
+            <a href="https://www.google.com/maps/search/Things+to+do" class="cta-button" target="_blank">Start Exploring</a>
+        </div>
+    </header>
+
+    <section class="features">
+        <div class="feature-card">
+            <img src="world-map.jpg" alt="Discover Destinations">
+            <h2>Discover Destinations</h2>
+            <p>Explore the world through our interactive world map, adorned with pins marking the most captivating travel destinations. Immerse yourself in the boundless possibilities of your next adventure.</p>
+        </div>
+        <div class="feature-card">
+            <img src="booking-interface.jpg" alt="Seamless Booking">
+            <h2>Seamless Booking</h2>
+            <p>Experience the utmost convenience with our user-friendly booking interface, tailored for both tablets and smartphones. Booking your dream getaway has never been this effortless.</p>
+        </div>
+        <div class="feature-card">
+            <img src="traveler-reviews.jpg" alt="Traveler Reviews">
+            <h2>Traveler Reviews</h2>
+            <p>Embark on a visual journey through the lens of fellow travelers. Our collage of authentic photos and heartwarming testimonials paints a vivid picture of the incredible experiences awaiting you.</p>
+        </div>
+    </section>
+
+    <section class="benefits">
+        <div class="benefit-section">
+            <img src="epic-adventure.jpg" alt="Unforgettable Experiences">
+            <h2>Unforgettable Experiences</h2>
+            <p>Elevate your travels to unforgettable heights. Immerse yourself in epic adventures, from thrilling hikes to enchanting snorkeling excursions. Every moment becomes a cherished memory.</p>
+        </div>
+        <div class="benefit-section">
+            <img src="exclusive-deals.jpg" alt="Exclusive Deals">
+            <h2>Exclusive Deals</h2>
+            <p>Unlock incredible savings with our exclusive deals and limited-time offers. Don't miss the chance to seize remarkable discounts for early bookings.</p>
+        </div>
+        <div class="benefit-section">
+            <img src="expert-guides.jpg" alt="Expert Guides">
+            <h2>Expert Guides</h2>
+            <p>Our friendly and knowledgeable tour guides are your trusted companions on the road. Benefit from their expertise and gain a deeper understanding of your chosen destination.</p>
+        </div>
+    </section>
+
+    <section class="testimonials">
+        <div class="testimonial-slider">
+            <div class="testimonial">
+                <div class="testimonial-content">
+                    <img src="sarah.jpg" alt="Sarah J." class="testimonial-image">
+                    <p>"Wanderlust Adventures made my dream vacation a reality. The guides were amazing, and I'll cherish the memories forever."</p>
+                    <span class="author">Sarah J.</span>
+                </div>
+            </div>
+            <div class="testimonial">
+                <div class="testimonial-content">
+                    <img src="john.jpg" alt="John D." class="testimonial-image">
+                    <p>"I can't thank Wanderlust Adventures enough for the incredible journey. Their attention to detail is unmatched."</p>
+                    <span class="author">John D.</span>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+
+    <section class="newsletter">
+        <h2>Subscribe to Our Newsletter</h2>
+        <p>Get travel inspiration, tips, and exclusive offers.</p>
+        <form action="#" method="post" id="newsletter-form">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <button type="submit" class="cta-button">Subscribe Now</button>
+        </form>
+    </section>
+
+    <footer>
+        <div class="contact-info">
+            <p>Contact us: <a href="tel:+123456789">+1 (234) 567-89</a> | <a href="mailto:info@wanderlustadventures.com">info@wanderlustadventures.com</a></p>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2023 Wanderlust Adventures</p>
+            <p><a href="https://www.internationaltravelhouse.in/privacy-policy.aspx" target="_blank">Privacy Policy</a></p>
+        </div>
+    </footer>
+
+    <script>
+        const newsletterForm = document.getElementById("newsletter-form");
+        newsletterForm.addEventListener("submit", function (e) {
+            e.preventDefault();
+            alert("Thank you for subscribing!");
+            newsletterForm.reset();
+        });
+    </script>
+</body>
+</html>

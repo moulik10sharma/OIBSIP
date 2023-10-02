@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body, h1, h2, p, a, form, img, ul, li {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f7f7f7;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        h1, h2, p, a, form {
+            text-align: center;
+        }
+
+        header {
+            position: relative;
+            background-color: #3498db;
+            color: #fff;
+            padding: 50px 0;
+        }
+
+        .header-image {
+            background-image: url('your-image.jpg');
+            background-size: cover;
+            height: 300px;
+            position: relative;
+            border-radius: 50%;
+            overflow: hidden;
+        }
+
+        .header-image img {
+            max-width: 100%;
+            max-height: 100%;
+        }
+
+        .header-content {
+            position: relative;
+            z-index: 1;
+            animation: fadeInUp 1s ease-in-out, typing 3s steps(40) forwards;
+        }
+
+        @keyframes fadeInUp {
+            0% {
+                transform: translateY(20px);
+                opacity: 0;
+            }
+            100% {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        @keyframes typing {
+            from {
+                width: 0;
+            }
+            to {
+                width: 100%;
+            }
+        }
+
+        header h1 {
+            font-size: 36px;
+            margin-bottom: 20px;
+            overflow: hidden;
+            white-space: nowrap;
+            border-right: 3px solid transparent;
+            animation: typing-cursor 1s steps(1) infinite;
+        }
+
+        @keyframes typing-cursor {
+            50% {
+                border-color: #fff;
+            }
+        }
+
+        .colored-box {
+            border: 2px solid #3498db;
+            background-color: #f7f7f7;
+            padding: 20px;
+            margin: 20px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: opacity 1s ease-in-out, transform 0.3s ease-in-out;
+            color: #333;
+            opacity: 0;
+            border-radius: 10px;
+        }
+
+        .colored-box:hover {
+            transform: scale(1.05);
+            opacity: 1;
+        }
+
+        .resume a {
+            display: block;
+            text-align: center;
+            margin-top: 10px;
+            color: #3498db;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 20px 0;
+        }
+
+        .contact-info a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+    </style>
+</head>
+<body>
+    <header class="colored-box">
+        <div class="header-image">
+            <img src="your-image.png" alt="My Picture">
+        </div>
+        <div class="header-content">
+            <h1 id="multilingual-hello">Hello, I'm Moulik Sharma</h1>
+            <p>Welcome to my portfolio website. I'm a web developer with a passion for creating interactive and user-friendly websites.</p>
+        </div>
+    </header>
+
+    <section class="contact colored-box">
+        <h2>Contact Information</h2><br>
+        <ul class="contact-icons">
+            <li><a href="https://www.linkedin.com/in/moulik10sharma" target="_blank"><i class="fab fa-linkedin"></i></a></li>
+            <li><a href="https://github.com/moulik10sharma" target="_blank"><i class="fab fa-github"></i></a></li>
+        </ul>
+    </section>
+
+    <section class="skills colored-box">
+        <h2>Skills</h2>
+        <ul>
+            <li>HTML5</li>
+            <li>CSS3</li>
+            <li>JavaScript</li>
+            <li>Responsive Web Design</li>
+            <li>Front-End Development</li>
+            <li>Back-End Development</li>
+        </ul>
+    </section>
+
+    <section class="projects colored-box">
+        <h2>Projects</h2>
+        <div class="project">
+            <h3><a href="http://127.0.0.1:3000/Task_1/Task1.html" target="_blank">Landing Page</a></h3>
+            <p>Designed a landing page for a tourism website.</p>
+        </div>
+        <div class="project">
+            <h3><a href="http://127.0.0.1:3000/Task_3/Task3.html" target="_blank">Temperature Converter</a></h3>
+            <p>Designed a temperature converter website supporting Celsius, Fahrenheit, and Kelvin.</p>
+        </div>
+    </section>
+
+    <section class="resume colored-box">
+        <h2>Resume</h2>
+        <a href="resume.pdf" target="_blank">Download Resume</a>
+    </section>
+
+    <footer class="colored-box">
+        <p>&copy; 2023 Moulik Sharma</p>
+    </footer>
+
+    <script>
+        function updateMultilingualHello() {
+            const languages = ["Hello", "Bonjour", "Hola", "Ciao", "こんにちは", "안녕하세요", "Hello"];
+            const helloElement = document.getElementById("multilingual-hello");
+            let index = 0;
+
+            function updateText() {
+                if (index < languages.length) {
+                    const currentText = languages[index];
+                    let text = "";
+                    let charIndex = 0;
+
+                    const interval = setInterval(function () {
+                        if (charIndex < currentText.length) {
+                            text += currentText[charIndex];
+                            helloElement.textContent = text + ", I'm Moulik Sharma";
+                            charIndex++;
+                        } else {
+                            clearInterval(interval);
+                            setTimeout(function () {
+                                updateText();
+                            }, 1000);
+                        }
+                    }, 200);
+                } else {
+                    index = 0;
+                    setTimeout(updateText, 1000);
+                }
+                index++;
+            }
+
+            updateText();
+        }
+
+        document.addEventListener("DOMContentLoaded", function () {
+            updateMultilingualHello();
+        });
+    </script>
+</body>
+</html>
